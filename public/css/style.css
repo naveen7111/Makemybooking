@@ -1,0 +1,427 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f2f2f2;
+    /*font-family: "Roboto", sans-serif;*/
+}
+
+/*------------Bg Parallex------------*/
+.bg-prarallex {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*------------Shadow------------*/
+
+.shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*------------Logo------------*/
+
+.logo {
+    height: 120px;
+}
+
+/*------------Navigation------------*/
+
+.navbar {
+    background-color: #03094c;
+}
+
+.heading {
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+/*===========Footer====================*/
+
+.footer-heading {
+    color: white;
+    font-weight: 100 !important;
+    font-size: 1.5rem;
+}
+
+.footer-text {
+    color: rgb(192, 190, 190);
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+#footer .form-control {
+    width: 20rem;
+}
+
+.footer-menu-text {
+    color: rgb(129, 129, 129);
+    font-weight: 300;
+    font-size: 1rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+}
+
+#footer hr {
+    border-color: white;
+}
+
+#footer .copyright {
+    color: rgb(129, 129, 129);
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+/*============Mobile & Desktop=========*/
+
+@media only screen and (max-width: 600px) {
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+}
+
+/*============Rounded box=========*/
+
+.rounded-box {
+    border-radius: 10px;
+}
+
+/*==============================================================================================================
+                                              Home Page
+==============================================================================================================*/
+
+/*----------Main Search Box------------*/
+
+#main-search-box .search-box-navbar {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#main-search-box .search-box-navbar-container {
+    top: 40px;
+    position: relative;
+}
+
+#main-search-box .search-box-navbar-text {
+    text-decoration: none;
+    color: #757272;
+}
+
+#main-search-box .search-area-container {
+    border-radius: 10px;
+}
+
+#main-search-box .search-area-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+#main-search-box .search-area-input-text {
+    color: black;
+    font-weight: bold;
+    font-size: 2.2rem;
+    line-height: 2.2rem;
+}
+
+#main-search-box .search-area-input-text-small {
+    font-size: 0.8rem;
+}
+
+#main-search-box .input-result-card {
+    z-index: 1000;
+    position: absolute;
+}
+
+#main-search-box .input-result-city-text {
+    color: black;
+    font-weight: 500;
+}
+
+#main-search-box .search-area-input-text-2 {
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.2rem;
+}
+
+#main-search-box .input-result-city-search {
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+#main-search-box .input-result-date {
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+#main-search-box .search-area-border-left {
+    border-radius: 10px 0 0 10px;
+}
+
+#main-search-box .search-area-border-right {
+    border-radius: 0 10px 10px 0;
+}
+
+#main-search-box .search-area-btn {
+    position: relative;
+    top: -40px;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    border-radius: 50px;
+}
+
+#main-search-box .search-area-btn .btn {
+    border-radius: 50px;
+}
+
+/*----------Home Cover------------*/
+
+#main-search-box .home-cover {
+    top: 20px;
+    position: relative;
+    background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=753&q=80");
+    height: 100%;
+}
+
+/*----------Offers------------*/
+
+#offers {
+    top: -28px;
+    position: relative;
+}
+
+#offers .heading {
+    font-size: 2.5rem;
+}
+
+#offers .offer-name {
+    font-size: 0.9rem;
+    color: rgb(4, 4, 245);
+    letter-spacing: 0.5px;
+}
+
+#offers .offer-text {
+    font-size: 0.9rem;
+    color: rgb(90, 90, 90);
+    letter-spacing: 0.5px;
+}
+
+#offers .offer-price {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+#offers .offer-review {
+    font-size: 0.9rem;
+    color: rgb(97, 97, 248);
+}
+
+#offers .offer-review span {
+    font-size: 0.7rem;
+    color: rgb(90, 90, 90);
+}
+
+#offers .offer-review .btn {
+    border-radius: 5px 5px 5px 0 !important;
+}
+
+/*=============Property===============*/
+
+.property-name {
+    font-size: 1rem;
+    color: black;
+    margin-top: 0.7rem;
+    font-weight: bolder;
+}
+
+.property-text {
+    font-size: 0.9rem;
+}
+
+.properties-thumb-desktop {
+    height: 10rem;
+}
+/*==============================================================================================================
+                                              Search Result Page
+==============================================================================================================*/
+
+#search-result {
+    margin-top: 60px;
+}
+
+#search-result .search-result-sidemenu-heading {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+#search-result .search-result-sidemenu-heading-2 {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+#search-result .search-result-sidemenu-text {
+    font-size: 0.8rem;
+}
+
+#search-result .search-result-thumb-main {
+    width: 100%;
+    height: 13rem;
+}
+
+#search-result .search-result-thumb {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+#search-result .search-result-container .search-result-star {
+    font-size: 0.8rem;
+}
+
+#search-result .search-result-container .search-result-location {
+    font-size: 0.8rem;
+}
+
+#search-result .search-result-container .search-result-room-type {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+#search-result .search-result-container .search-result-bed-type {
+    line-height: 1rem;
+    font-size: 0.8rem;
+}
+
+#search-result .search-result-container .search-result-refund {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: green;
+}
+
+#search-result .search-result-container .search-result-risk {
+    line-height: 1rem;
+    font-size: 0.7rem;
+    color: green;
+}
+
+.search-result-review {
+    line-height: 1rem;
+    font-size: 1rem;
+    color: rgb(97, 97, 248);
+}
+
+.search-result-review-count {
+    font-size: 0.7rem;
+    color: rgb(90, 90, 90);
+}
+
+.search-result-price {
+    font-weight: bolder;
+    font-size: 1.1rem;
+}
+
+#search-result .search-result-container .search-result-similar-properties {
+    font-size: 0.8rem;
+}
+
+/*========================================================
+                        Room Page
+=========================================================*/
+
+#room-page .room-page-thumb-main {
+    height: 29rem;
+    width: 100%;
+}
+
+#room-page .room-page-thumb {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+#room-page .search-result-price {
+    font-size: 1.7rem;
+    line-height: 1.7rem;
+}
+
+.lock-reservation-title {
+    font-size: 1rem;
+    color: #3a3a3a;
+    font-weight: bold;
+}
+
+.lock-reservation-text {
+    font-size: 0.8rem;
+    color: #3a3a3a;
+}
+
+/*==============================================================================================================
+                                              Backend
+==============================================================================================================*/
+
+.avatar {
+    height: 30px;
+    width: 30px;
+}
+
+.notification:hover {
+    background-color: #f2f2f2;
+}
+
+/*========================================================
+                        Customer Dashboard
+=========================================================*/
+
+#user-dashboard {
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+.user-dashboard-tile:hover {
+    background-color: rgb(230, 232, 253);
+}
+
+#user-dashboard a {
+    text-decoration: none !important;
+    color: #757272;
+}
+
+#user-dashboard ul a {
+    color: black;
+}
+
+#user-dashboard table thead {
+    font-size: 0.8rem;
+}
+
+#user-dashboard table tbody {
+    font-size: 0.9rem;
+}
+
+.notification-box {
+    z-index: 1000;
+    position: absolute;
+}
+
+.router-link-exact-active {
+    border: 1px solid #aed7f1;
+    font-weight: bold;
+}

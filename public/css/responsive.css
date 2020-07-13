@@ -1,0 +1,116 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    /*======================================================================
+                                  Footer                      
+    ======================================================================*/
+    .footer-menu-text {
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+
+    #footer .copyright {
+        font-size: 0.8rem;
+        font-weight: 400;
+    }
+
+    /*======================================================================
+                                  Home Page                       
+    ======================================================================*/
+    #main-search-box .search-area-border-left {
+        border-radius: 0;
+    }
+    #main-search-box .search-area-border-right {
+        border-radius: 0;
+    }
+
+    #main-search-box .search-area-sentence {
+        font-size: 0.8rem;
+    }
+
+    #main-search-box .search-area-container {
+        top: 50px;
+        position: relative;
+    }
+
+    #main-search-box .search-area-btn {
+        position: relative;
+        top: 15px;
+    }
+
+    #offers .heading {
+        font-size: 2rem;
+        margin-right: 3rem;
+    }
+
+    #properties .container {
+        border-radius: 0;
+    }
+
+    /*======================================================================
+                                  Search Result Page                       
+    ======================================================================*/
+
+    #search-result .rounded-box {
+        border-radius: 0;
+        margin-right: 0;
+    }
+
+    #search-result .reservation-container {
+        padding-right: 0;
+    }
+
+    #search-result .heading {
+        font-size: 1.2rem;
+        margin-left: 20px;
+    }
+
+    /*======================================================================
+                                  Room Page                       
+    ======================================================================*/
+
+    #room-page .room-page-thumb-main {
+        height: 20rem;
+        width: 100%;
+    }
+
+    .lock-reservation-title {
+        font-size: 0.8rem;
+        color: #3a3a3a;
+        font-weight: bold;
+    }
+
+    .lock-reservation-text {
+        font-size: 0.7rem;
+        color: #3a3a3a;
+    }
+
+    #room-page .rounded-box {
+        border-radius: 0;
+        margin-right: 0;
+    }
+
+    /*======================================================================
+                                  User dashboard                       
+    ======================================================================*/
+
+    #user-dashboard .rounded-box {
+        border-radius: 0;
+        margin-right: 0;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
