@@ -13,12 +13,13 @@
 
                     <div class="heading">Sign up</div>
                     <div class="my-3">
-                        <form>
+                        <form method="post" action="{{ route('register-details') }}">
+                            @csrf
                         <div class="form-group">
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                            <input type="email" name="userEmail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block">Get started</button>
+                        <button href="" type="submit" class="btn btn-primary btn-block">Get started</button>
                         </form>
                     </div>
 

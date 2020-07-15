@@ -21,45 +21,45 @@
                             @csrf
                         <div class="form-group my-4">
                             <label for="cityOproperty">Destination/Property name :</label>
-                            <input name="cityOproperty" type="text" class="form-control-sm w-100 border-0" id="cityOproperty" required>
+                            <input name="cityOproperty" type="text" class="form-control-sm w-100 border-0" id="cityOproperty" placeholder="{{ $cityOproperty }}" required>
                         </div>
                         <div class="form-group my-4">
                             <label for="checkIn">Check-in date :</label>
-                            <input name="checkIn" type="date" class="form-control-sm w-100 border-0" id="checkIn"  required>
+                            <input name="checkIn" type="date" class="form-control-sm w-100 border-0" id="checkIn" value="{{ $checkIn }}"  required>
                         </div>
                         <div class="form-group my-4">
                             <label for="checkOut">Check-out date :</label>
-                            <input name="checkOut" type="date" class="form-control-sm w-100 border-0" id="checkOut"  required>
+                            <input name="checkOut" type="date" class="form-control-sm w-100 border-0" id="checkOut" value="{{ $checkOut }}"  required>
                         </div>
                         <div class="form-group my-4">
-                            <select class="custom-select custom-select-sm  col" name="adults"  required>
-                                <option value="1">1 adult</option>
-                                <option value="2">2 adults</option>
-                                <option value="3">3 adults</option>
-                                <option value="4">4 adults</option>
+                            <select class="custom-select custom-select-sm  col" name="adults" value="{{ $adults }}"  required>
+                                <option value="1" {{ $adults==1 ? 'selected' : '' }}>1 adult</option>
+                                <option value="2" {{ $adults==2 ? 'selected' : '' }}>2 adults</option>
+                                <option value="3" {{ $adults==3 ? 'selected' : '' }}>3 adults</option>
+                                <option value="4" {{ $adults==4 ? 'selected' : '' }}>4 adults</option>
                             </select>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-6">
                                 <select class="custom-select custom-select-sm  col" name="children"  required>
-                                <option value="0" >No children</option>
-                                <option value="1" >1 child</option>
-                                <option value="2" >2 children</option>
-                                <option value="3" >3 children</option>
+                                <option value="0" {{ $children==0 ? 'selected' : '' }}>No children</option>
+                                <option value="1" {{ $children==1 ? 'selected' : '' }}>1 child</option>
+                                <option value="2" {{ $children==2 ? 'selected' : '' }}>2 children</option>
+                                <option value="3" {{ $children==3 ? 'selected' : '' }}>3 children</option>
                                 </select>
                             </div>
                             <div class="form-group col-6">
                                     <select class="custom-select custom-select-sm col" name="rooms"  required>
-                                    <option value="1" >1 room</option>
-                                    <option value="2" >2 room</option>
-                                    <option value="3" >3 room</option>
-                                    <option value="4" >4 room</option>
-                                    <option value="5" >5 room</option>
-                                    <option value="6" >6 room</option>
-                                    <option value="7" >7 room</option>
-                                    <option value="8" >8 room</option>
-                                    <option value="9" >9 room</option>
-                                    <option value="10" >10 room</option>
+                                    <option value="1" {{ $rooms==1 ? 'selected' : '' }}>1 room</option>
+                                    <option value="2" {{ $rooms==2 ? 'selected' : '' }}>2 room</option>
+                                    <option value="3" {{ $rooms==3 ? 'selected' : '' }}>3 room</option>
+                                    <option value="4" {{ $rooms==4 ? 'selected' : '' }}>4 room</option>
+                                    <option value="5" {{ $rooms==5 ? 'selected' : '' }}>5 room</option>
+                                    <option value="6" {{ $rooms==6 ? 'selected' : '' }}>6 room</option>
+                                    <option value="7" {{ $rooms==7 ? 'selected' : '' }}>7 room</option>
+                                    <option value="8" {{ $rooms==8 ? 'selected' : '' }}>8 room</option>
+                                    <option value="9" {{ $rooms==9 ? 'selected' : '' }}>9 room</option>
+                                    <option value="10" {{ $rooms==10 ? 'selected' : '' }}>10 room</option>
                                     </select>
                             </div>
                         </div>
@@ -229,16 +229,15 @@
 
                                         
                                         
-                                            @foreach ($rooms as $room)
-                                                @if ($room->pId==$property->id)
+                                            
 
                                                     <div class="card-text mt-2 mb-0 py-0 search-result-room-type"> 
 
-                                                        {{ $room->roomType }} - 
-                                                        @if(($room->roomCapacity)>4)
-                                                            <i class="fas fa-user"></i> x {{ $room->roomCapacity }}
+                                                        {{ $property->roomType }} - 
+                                                        @if(($property->roomCapacity)>4)
+                                                            <i class="fas fa-user"></i> x {{ $property->roomCapacity }}
                                                         @else
-                                                            @for($i=0 ; $i<$room->roomCapacity ; $i++)
+                                                            @for($i=0 ; $i<$property->roomCapacity ; $i++)
                                                                 <i class="fas fa-user"></i>
                                                             @endfor
                                                         @endif
@@ -246,14 +245,13 @@
                                                 
                                                     </div>
                                                     <div class="card-text my-0 py-0 text muted search-result-bed-type">
-                                                        {{ $room->roomBedtype }}
+                                                        {{ $property->roomBedtype }}
                                                     </div>
 
-                                                @break
+                                                
 
 
-                                                @endif
-                                            @endforeach
+                                               
 
                                         
                                         
@@ -280,27 +278,23 @@
                                             <button type="button" class="btn btn-primary btn-lg p-0 m-0 py-1 px-1 ml-1 align-self-right">9.1</button>
                                         </div>
 
-                                        @foreach ($rooms as $room)
-                                            @if ($room->pId==$property->id)
+                                       
 
-                                                @if (($room->roomsAvailable)<5 && ($room->roomsAvailable)!=0)
-                                                    <div><button type="button" class="btn btn-danger my-3 py-0">Only {{ $room->roomsAvailable }} left</button></div>
+                                                @if (($property->roomsAvailable)<5 && ($property->roomsAvailable)!=0)
+                                                    <div><button type="button" class="btn btn-danger my-3 py-0">Only {{ $property->roomsAvailable }} left</button></div>
                                                 @endif
 
                                                 <div><small class="text-muted">1 night, 2 adults</small></div>
 
-                                                <div><small class="text-muted"><del>LKR {{ $room->roomDPrice }}</del></small> <span class="search-result-price">LKR {{ $room->roomAPrice }}</span></div>
+                                                <div><small class="text-muted"><del>LKR {{ $property->roomDPrice }}</del></small> <span class="search-result-price">LKR {{ $property->roomAPrice }}</span></div>
 
-                                                @if(($room->roomsAvailable)>=1)
+                                                @if(($property->roomsAvailable)>=1)
                                                     <div><a href="{{ route('room', [$property->id]) }}" class="btn btn-outline-primary btn-block my-3 py-1">Select your room</a></div>
                                                 @else
                                                     <div><button type="button" class="btn btn-outline-danger my-3 py-1"><i class="far fa-clock fa-4x"></i> <div>JUST MISSED IT!</div></button></div>
                                                 @endif
 
-                                                @break
-
-                                            @endif
-                                        @endforeach
+                                                
 
                                     </div>
 
@@ -315,25 +309,23 @@
                                             </div>
                                         </div>
 
-                                        @foreach ($rooms as $room)
-                                            @if ($room->pId==$property->id)
+                                        
 
-                                                @if (($room->roomsAvailable)<5)
-                                                <div class="float-right"><button type="button" class="btn btn-danger my-3 py-0">Only {{ $room->roomsAvailable }} left</button></div>
+                                                @if (($property->roomsAvailable)<5)
+                                                <div class="float-right"><button type="button" class="btn btn-danger my-3 py-0">Only {{ $property->roomsAvailable }} left</button></div>
                                                 @endif
 
                                                 <div><small class="text-muted">1 night, 2 adults</small></div>
 
-                                                <div><span class="search-result-price">LKR {{ $room->roomAPrice }}</span> <small class="text-muted"><del>LKR {{ $room->roomDPrice }}</del></small> </div>
+                                                <div><span class="search-result-price">LKR {{ $property->roomAPrice }}</span> <small class="text-muted"><del>LKR {{ $property->roomDPrice }}</del></small> </div>
                                         
-                                                @if(($room->roomsAvailable)>=1)
+                                                @if(($property->roomsAvailable)>=1)
                                                     <div class="text-right mx-4"><a href="{{ route('room', [$property->id]) }}" class="btn btn-outline-primary btn-block my-3 py-1">Select your room</a></div>
                                                 @else
                                                     <div><button type="button" class="btn btn-block btn-outline-danger my-3 py-1"><i class="far fa-clock fa-4x"></i> <div>JUST MISSED IT!</div></button></div>
                                                 @endif
 
-                                            @endif
-                                        @endforeach
+                                            
                                     
                                     </div>
 

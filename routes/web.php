@@ -17,17 +17,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/search-result', function () {
-    return view('search-result');
-});
+Route::get('/search-result', 'PropertyController@index');
 
-Route::get('/search-result/room', function () {
-    return view('room');
-});
+Route::post('/search-result', 'SearchController@search')->name('search');
 
-Route::get('/search-result/apartment', function () {
-    return view('apartment');
-});
+Route::get('/search-result/room/{pId}', 'PropertyController@roomView')->name('room');
+
+Route::get('/search-result/apartment/{pId}', 'PropertyController@apartmentView')->name('apartment');
+
+
 
 Route::get('/booking', function () {
     return view('booking');
@@ -36,7 +34,7 @@ Route::get('/booking', function () {
 
 //Customer
 
-
+Route::post('/register-details', 'Auth\RegisterController@details')->name('register-details');
 
 
 

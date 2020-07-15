@@ -69,7 +69,7 @@
                     <div class="col-12 bg-white pt-0 px-0 mx-0">
 
                         <div style="" class="mt-0 mb-5">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15844.513666787981!2d79.8635045!3d6.8752137!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3080e0d0a330e637!2sVictoria%20Palace.lk!5e0!3m2!1sen!2slk!4v1594099407018!5m2!1sen!2slk" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" width="100%" height="300px"></iframe>
+                            <iframe src="{{ $property->propertyMap }}" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" width="100%" height="300px"></iframe>
                         </div> 
                         
 
@@ -176,20 +176,26 @@
                         <div class="row no-gutters">
 
                             <div class="row card-img-top no-gutters popup-gallery">
-                                <a class="col-12"><img src="https://r-cf.bstatic.com/images/hotel/max1024x768/231/231369855.jpg" id="mainImage" class="room-page-thumb-main" style=""></a>
-                                <a class="col border" onmouseover="imageThumbnail('https://r-cf.bstatic.com/images/hotel/max1024x768/231/231369309.jpg')"><img src="https://r-cf.bstatic.com/images/hotel/max1024x768/231/231369309.jpg" class="room-page-thumb" alt="" ></a>
-                                <a class="col border" onmouseover="imageThumbnail('https://r-cf.bstatic.com/images/hotel/max1024x768/231/231369300.jpg')"><img src="https://r-cf.bstatic.com/images/hotel/max1024x768/231/231369300.jpg" class="room-page-thumb" alt="" ></a>
-                                <a class="col border" onmouseover="imageThumbnail('https://q-cf.bstatic.com/images/hotel/max1024x768/231/231369303.jpg')"><img src="https://q-cf.bstatic.com/images/hotel/max1024x768/231/231369303.jpg" class="room-page-thumb" alt="" ></a>
-                                <a class="col border" onmouseover="imageThumbnail('https://r-cf.bstatic.com/images/hotel/max1024x768/231/231369457.jpg')"><img src="https://r-cf.bstatic.com/images/hotel/max1024x768/231/231369457.jpg" class="room-page-thumb" alt="" ></a>
-                                <a class="col border" onmouseover="imageThumbnail('https://r-cf.bstatic.com/images/hotel/max1024x768/231/231369267.jpg')"><img src="https://r-cf.bstatic.com/images/hotel/max1024x768/231/231369267.jpg" class="room-page-thumb" alt="" ></a>
-                                <a class="col border" onmouseover="imageThumbnail('https://q-cf.bstatic.com/images/hotel/max1024x768/231/231369306.jpg')"><img src="https://q-cf.bstatic.com/images/hotel/max1024x768/231/231369306.jpg" class="room-page-thumb" alt="" ></a>
+                                <a class="col-12"><img src="{{ $property->propertyImg1 }}" id="mainImage" class="room-page-thumb-main" style=""></a>
+                                <a class="col border" onmouseover="imageThumbnail('{{ $property->propertyImg1 }}')"><img src="{{ $property->propertyImg1 }}" class="room-page-thumb" alt="" ></a>
+                                <a class="col border" onmouseover="imageThumbnail('{{ $property->propertyImg2 }}')"><img src="{{ $property->propertyImg2 }}" class="room-page-thumb" alt="" ></a>
+                                <a class="col border" onmouseover="imageThumbnail('{{ $property->propertyImg3 }}')"><img src="{{ $property->propertyImg3 }}" class="room-page-thumb" alt="" ></a>
+                                <a class="col border" onmouseover="imageThumbnail('{{ $property->propertyImg4 }}')"><img src="{{ $property->propertyImg4 }}" class="room-page-thumb" alt="" ></a>
+                                <a class="col border" onmouseover="imageThumbnail('{{ $property->propertyImg5 }}')"><img src="{{ $property->propertyImg5 }}" class="room-page-thumb" alt="" ></a>
+                                <a class="col border" onmouseover="imageThumbnail('{{ $property->propertyImg6 }}')"><img src="{{ $property->propertyImg6 }}" class="room-page-thumb" alt="" ></a>
+                                <a class="col border" onmouseover="imageThumbnail('{{ $property->propertyImg7 }}')"><img src="{{ $property->propertyImg7 }}" class="room-page-thumb" alt="" ></a>
+                                <a class="col border" onmouseover="imageThumbnail('{{ $property->propertyImg8 }}')"><img src="{{ $property->propertyImg8 }}" class="room-page-thumb" alt="" ></a>
+                                <a class="col border" onmouseover="imageThumbnail('{{ $property->propertyImg9 }}')"><img src="{{ $property->propertyImg9 }}" class="room-page-thumb" alt="" ></a>
+                                <a class="col border" onmouseover="imageThumbnail('{{ $property->propertyImg10 }}')"><img src="{{ $property->propertyImg10 }}" class="room-page-thumb" alt="" ></a>
+                                <a class="col border" onmouseover="imageThumbnail('{{ $property->propertyImg11 }}')"><img src="{{ $property->propertyImg11 }}" class="room-page-thumb" alt="" ></a>
+                                <a class="col border" onmouseover="imageThumbnail('{{ $property->propertyImg12 }}')"><img src="{{ $property->propertyImg12 }}" class="room-page-thumb" alt="" ></a>
                             </div>
 
                             <div class="card-body">
                                 <div class="row">
 
                                     <div class="col-md-10">
-                                        <h5 class="card-title my-1" style="font-size: 2rem; font-weight:600">Victoria Palace </h5>
+                                        <h5 class="card-title my-1" style="font-size: 2rem; font-weight:600">{{ $property->propertyName }} </h5>
                                         <p class="card-text my-0 text-primary" style="font-size: 0.8rem;">
                                             <i class="fas fa-star"></i>
                                             <i class="fas fa-star"></i>
@@ -197,18 +203,10 @@
                                             <i class="fas fa-star"></i>
                                             <i class="far fa-star"></i>
                                         </p>
-                                        <p class="card-text my-0 text-primary" style="font-size: 0.8rem;"><i class="fas fa-map-marker-alt"></i> No.93/1 , Manning Place , Colombo | <b><a href="#">View on map</a></b></p>
+                                        <p class="card-text my-0 text-primary" style="font-size: 0.8rem;"><i class="fas fa-map-marker-alt"></i> {{ $property->propertyAddress }} | <b><a data-toggle="modal" data-target="#map{{ $property->id }}">View on map</a></b></p>
 
                                         <div class="card-text my-3 py-0 text muted" style="line-height:1.2rem; font-size: 1rem;">
-                                            
-
-Located in Colombo, an 18-minute walk from Mount Lavinia Beach, OYO 473 Victoria Palace has accommodations with free WiFi and free private parking. The property is around 5.1 km from American Embassy, 9.7 km from R Premadasa Stadium and 11.3 km from Khan Clock Tower. The hotel has family rooms.
-
-The rooms in the hotel are equipped with a flat-screen TV. At OYO 473 Victoria Palace rooms contain a private bathroom.<br/><br/>
-
-Barefoot Gallery is 3.4 km from the accommodation, while Arcade Independence Square is 4.5 km from the property. The nearest airport is Ratmalana Airport, 11.3 km from OYO 473 Victoria Palace.
-
-We speak your language! 
+                                            {{ $property->propertyDes }}                                            
                                         </div>
                                         
                                         <div class="card-text mt-2 mb-0 py-0" style="font-size: 0.9rem; font-weight:bold; color:green">FREE cancellation | No prepayment needed</div>
@@ -228,7 +226,13 @@ We speak your language!
 
                                         <div><small class="text-muted">1 night, 2 adults</small></div>
 
-                                        <div><small class="text-muted"><del>LKR 10,597</del></small> <br/>LKR<br/><span class="search-result-price"> 105,297</span></div>
+                                        @foreach ($rooms as $room)
+                                          @if($loop->first)
+                                            <div><small class="text-muted"><del>LKR {{ $room->roomDPrice }}</del></small> <br/>LKR<br/><span class="search-result-price"> {{ $room->roomAPrice }}</span></div>
+                                          @endif  
+                                        @endforeach
+
+                                        
                                         
                                         <div><a href="#property-reserve" type="button" class="btn btn-primary btn-block my-4 py-3">Reserve</a></div>
                                         
@@ -248,7 +252,13 @@ We speak your language!
 
                                         <div><small class="text-muted">1 night, 2 adults</small></div>
 
-                                        <div><small class="text-muted"><del>LKR 10,597</del></small> <br/>LKR<br/><span class="search-result-price">5,297</span>  </div>
+                                        @foreach ($rooms as $room)
+                                          @if($loop->first)
+                                            <div><small class="text-muted"><del>LKR {{ $room->roomDPrice }}</del></small> <br/>LKR<br/><span class="search-result-price">{{ $room->roomAPrice }}</span>  </div>
+                                          @endif  
+                                        @endforeach
+
+                                        
                                         
                                         <div class="text-right mx-4 mt-5"><a href="#property-reserve" type="button" class="btn btn-primary btn-block my-3 py-3">Reserve</a></div>
                                     
@@ -309,155 +319,59 @@ We speak your language!
 
                     </div>
 
-                    <div class="col-12 p-0 my-2">
-                        
-                        <div class="card text-left p-0">
-                        <div class="card-header p-2">
-                            <b>Double Room</b> | <i class="fas fa-bed"></i> 1 full bed
-                        </div>
-                        <div class="card-body">
-                            <div class="row" style="font-size: .8rem">
+                    @foreach ($rooms as $room)
+                        <div class="col-12 p-0 my-2">
+                            
+                            <div class="card text-left p-0">
+                            <div class="card-header p-2">
+                                <b>{{ $room->roomType }}</b> | 
+                                <i class="fas fa-bed"></i> {{ $room->roomBedtype }}
+                            </div>
+                            <div class="card-body">
+                                <div class="row" style="font-size: .8rem">
 
-                                <div class="col-md-2 p-1"><img class="" src="https://r-cf.bstatic.com/images/hotel/max1024x768/231/231369855.jpg" alt="" style="width:100%; height:100%"></div>
-                                
-                                <div class="col-md-4 p-2 border" style="background-color: #F7F7F7">
-                                    <div><b>Benefits</b></div>
-                                    <div><i class="far fa-check-circle text-success"></i> Free cancellation before July 14, 2020</div>
-                                    <div><i class="far fa-check-circle text-success"></i> 1 kid under 13 years stays FREE</div>
-                                </div>
-                                
-                                <div class="col-md-2 col-8 p-2 border" style="background-color: #F7F7F7">
-                                    <div><b>Price per night</b></div>
-                                    <div style="font-weight:bolder; font-size:1.1rem" class="text-danger">LKR 5,297</div>
-                                </div>
-                                
-                                <div class="col-md-2 col-4 p-2 border" style="background-color: #F7F7F7">
-                                    <div><b>Rooms</b></div>
-                                    <div class="m-1">
-                                        <select class="custom-select custom-select-sm col w-100">
-                                        <option value="1" selected>1 room</option>
-                                        <option value="2">2 room</option>
-                                        <option value="3">3 room</option>
-                                        <option value="4">4 room</option>
-                                        </select>
+                                    <div class="col-md-2 p-1"><img class="" src="{{ $room->roomImg }}" alt="" style="width:100%; height:100%"></div>
+                                    
+                                    <div class="col-md-4 p-2 border" style="background-color: #F7F7F7">
+                                        <div><b>Benefits</b></div>
+                                        <div><i class="far fa-check-circle text-success"></i> Free cancellation before July 14, 2020</div>
+                                        <div><i class="far fa-check-circle text-success"></i> 1 kid under 13 years stays FREE</div>
                                     </div>
-                                </div>
-
-                                <div class="col-md-2">
-                                    <div class="alert alert-info text-center my-2 p-1" role="alert">
-                                        <div style="font-size: 0.7rem; line-height:0.7rem; font-weight:bold; color:green">No Risk!</div>  
-                                        <div style="font-size: 0.7rem; line-height:0.7rem; color:green">No cancellation fee</div>
+                                    
+                                    <div class="col-md-2 col-8 p-2 border" style="background-color: #F7F7F7">
+                                        <div><b>Price per night</b></div>
+                                        <div style="font-weight:bolder; font-size:1.1rem" class="text-danger">LKR {{ $room->roomAPrice }}</div>
                                     </div>
-                                    <div><a href="{{ url('/booking') }}" type="button" class="btn btn-primary btn-block my-1 py-2">Reserve</a></div>
-                                </div>
+                                    
+                                    <div class="col-md-2 col-4 p-2 border" style="background-color: #F7F7F7">
+                                        <div><b>Rooms</b></div>
+                                        <div class="m-1">
+                                            <select class="custom-select custom-select-sm col w-100">
+                                            <option value="1" selected>1 room</option>
+                                            <option value="2">2 room</option>
+                                            <option value="3">3 room</option>
+                                            <option value="4">4 room</option>
+                                            </select>
+                                        </div>
+                                    </div>
 
+                                    <div class="col-md-2">
+                                        <div class="alert alert-info text-center my-2 p-1" role="alert">
+                                            <div style="font-size: 0.7rem; line-height:0.7rem; font-weight:bold; color:green">No Risk!</div>  
+                                            <div style="font-size: 0.7rem; line-height:0.7rem; color:green">No cancellation fee</div>
+                                        </div>
+                                        <div><a href="{{ url('/booking') }}" type="button" class="btn btn-primary btn-block my-1 py-2">Reserve</a></div>
+                                    </div>
+
+                                </div>
+                                
                             </div>
                             
-                        </div>
-                        
-                        </div>
+                            </div>
 
-                    </div> 
+                        </div> 
+                    @endforeach
                     
-                    <div class="col-12 p-0 my-2">
-                        
-                        <div class="card text-left p-0">
-                        <div class="card-header p-2">
-                            <b>Deluxe Room</b> | <i class="fas fa-bed"></i> 1 king bed
-                        </div>
-                        <div class="card-body">
-                            <div class="row" style="font-size: .8rem">
-
-                                <div class="col-md-2 p-1"><img class="" src="https://r-cf.bstatic.com/images/hotel/max1024x768/231/231369465.jpg" alt="" style="width:100%; height:100%"></div>
-                                
-                                <div class="col-md-4 p-2 border" style="background-color: #F7F7F7">
-                                    <div><b>Benefits</b></div>
-                                    <div><i class="far fa-check-circle text-success"></i> Free cancellation before July 14, 2020</div>
-                                    <div><i class="far fa-check-circle text-success"></i> 1 kid under 13 years stays FREE</div>
-                                </div>
-                                
-                                <div class="col-md-2 col-8 p-2 border" style="background-color: #F7F7F7">
-                                    <div><b>Price per night</b></div>
-                                    <div style="font-weight:bolder; font-size:1.1rem" class="text-danger">LKR 7,365</div>
-                                </div>
-                                
-                                <div class="col-md-2 col-4 p-2 border" style="background-color: #F7F7F7">
-                                    <div><b>Rooms</b></div>
-                                    <div class="m-1">
-                                        <select class="custom-select custom-select-sm w-100">
-                                        <option value="1" selected>1 room</option>
-                                        <option value="2">2 room</option>
-                                        <option value="3">3 room</option>
-                                        <option value="4">4 room</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-2">
-                                    <div class="alert alert-info text-center p-1" role="alert">
-                                        <div style="font-size: 0.7rem; line-height:0.7rem; font-weight:bold; color:green">No Risk!</div>  
-                                        <div style="font-size: 0.7rem; line-height:0.7rem; color:green">No cancellation fee</div>
-                                    </div>
-                                    <div><a href="{{ url('/booking') }}" type="button" class="btn btn-primary btn-block my-1 py-2">Reserve</a></div>
-                                </div>
-
-                            </div>
-                            
-                        </div>
-                        
-                        </div>
-
-                    </div> 
-
-                    <div class="col-12 p-0 my-2">
-                        
-                        <div class="card text-left p-0">
-                        <div class="card-header p-2">
-                            <b>Standard Single Room</b> | <i class="fas fa-bed"></i> 1 twin bed
-                        </div>
-                        <div class="card-body">
-                            <div class="row" style="font-size: .8rem">
-
-                                <div class="col-md-2 p-1"><img class="" src="https://r-cf.bstatic.com/images/hotel/max1024x768/231/231369855.jpg" alt="" style="width:100%; height:100%"></div>
-                                
-                                <div class="col-md-4 p-2 border" style="background-color: #F7F7F7">
-                                    <div><b>Benefits</b></div>
-                                    <div><i class="far fa-check-circle text-success"></i> Free cancellation before July 14, 2020</div>
-                                    <div><i class="far fa-check-circle text-success"></i> 1 kid under 13 years stays FREE</div>
-                                </div>
-                                
-                                <div class="col-md-2 col-8 p-2 border" style="background-color: #F7F7F7">
-                                    <div><b>Price per night</b></div>
-                                    <div style="font-weight:bolder; font-size:1.1rem" class="text-danger">LKR 4,320</div>
-                                </div>
-                                
-                                <div class="col-md-2 col-4 p-2 border" style="background-color: #F7F7F7">
-                                    <div><b>Rooms</b></div>
-                                    <div class="m-1">
-                                        <select class="custom-select custom-select-sm w-100">
-                                        <option value="1" selected>1 room</option>
-                                        <option value="2">2 room</option>
-                                        <option value="3">3 room</option>
-                                        <option value="4">4 room</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-2">
-                                    <div class="alert alert-info text-center p-1" role="alert">
-                                        <div style="font-size: 0.7rem; line-height:0.7rem; font-weight:bold; color:green">No Risk!</div>  
-                                        <div style="font-size: 0.7rem; line-height:0.7rem; color:green">No cancellation fee</div>
-                                    </div>
-                                    <div><a href="{{ url('/booking') }}" type="button" class="btn btn-primary btn-block my-1 py-2">Reserve</a></div>
-                                </div>
-
-                            </div>
-                            
-                        </div>
-                        
-                        </div>
-
-                    </div> 
 
 
                     <div class="col-12 p-0 my-2">
@@ -490,6 +404,24 @@ We speak your language!
 </section>
 
 
+
+
+
+<!-- Modal -->
+<div class="modal w-100 fade" id="map{{ $property->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <iframe src="{!! $property->propertyMap !!}" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 

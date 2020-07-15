@@ -85,7 +85,7 @@
                 
                 <span class="dropdown">
                     <button class="btn btn-outline dropdown-toggle border-0 text-light" type="button" data-target="#userMenuDropdown" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        {{ Auth::user()->name }}
+                        Abc{{-- Auth::user()->name --}}
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="userMenuDropdown">
                         <a class="dropdown-item" href="{{ url('/home#/user-home') }}">Dashboard</a>

@@ -7,6 +7,10 @@ body {
     /*font-family: "Roboto", sans-serif;*/
 }
 
+a {
+    cursor: pointer;
+}
+
 /*------------Bg Parallex------------*/
 .bg-prarallex {
     background-attachment: fixed;
@@ -258,6 +262,17 @@ body {
 
 .properties-thumb-desktop {
     height: 10rem;
+}
+
+/*===============Cities=================*/
+
+#cities .card {
+    transition: transform 0.5s;
+}
+
+#cities .card:hover {
+    transform: scale(1.04);
+    z-index: 1000;
 }
 /*==============================================================================================================
                                               Search Result Page
